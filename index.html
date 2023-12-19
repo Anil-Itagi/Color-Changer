@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        
+        #out {
+            text-align: center;
+            width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="out">
+        <h1 id="in">
+        </h1>
+
+    </div>
+    <footer>
+        <button id="hi" onclick="fun()" style="background-color:red; font-size:30px;">Change Color</button></footer>
+    <script>
+        var a = ["red", "green", "yellow", "blue", "lightgreen", "white", "black", "pink", "purple", "orange", "brown", "violet", "cyan",
+            "lime",
+            "#800080",
+            "indigo",
+            "maroon",
+            "navy",
+            "olive",
+            "silver",
+            "gold",
+            "violet",
+            "magenta",
+            "#008080",
+            "salmon",
+            "turquoise",
+        ]
+
+        function fun() {
+            let y = Math.floor((Math.random() * a.length) + 1);
+            var x = document.getElementById("in").innerHTML = a[y];
+            document.getElementById("out").style.backgroundColor = a[y];
+        }
+    </script>
+</body>
+
+</html>
